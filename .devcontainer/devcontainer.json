@@ -1,0 +1,20 @@
+{
+  "name": "Lean 4 & Lake Dev Container",
+  "image": "ghcr.io/leanprover/lean4:latest",
+  "features": {},
+  "postCreateCommand": "lake update",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "leanprover.lean4"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.lean:/root/.lean"
+  ],
+  "forwardPorts": [],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
